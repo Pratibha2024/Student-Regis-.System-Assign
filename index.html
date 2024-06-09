@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="studentReg.js"></script>
+</head>
+<body>
+
+  <!--Header part-->
+    <div class="header">
+      <h1>Student Enrollment Form</h1>
+    </div>
+
+  <!--Form Section-->
+  <div class="container">   
+    <div class="left_container">
+        <h2>Student Registration</h2>
+        <form id="form">
+            <label for="studentName">Student Name:</label>
+            <br>
+            <input type="text" id="sname" placeholder="Enter your Name" required>
+            <br>
+            <label for="studentId">Student ID:</label>
+            <br>
+            <input type="number" id="sId" placeholder="Enter your ID" required>
+            <br>
+            <label for="email">Email Id:</label>
+            <br>
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <br>
+            <label for="contact">Contact Number:</label>
+            <br>
+            <input type="number" id="contact" placeholder="Enter Contact No." required>
+            <br>
+            <button type="submit" style="margin-left: 12vw;">Add Record</button>
+            <input type="hidden" id="edit-index" value="-1">
+        </form>
+    </div>
+   
+    <div class="right_container">
+        <h2>Student Records</h2>
+        <div style="height: 50vh; overflow-y:auto; overflow-x: hidden;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Contact No.</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="record_list"></tbody>
+        </table>
+    </div>
+    </div>
+ </div>
+
+</body>
+</html>
